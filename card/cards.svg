@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-5 -5 210 310">
+	<defs><style>
+		@import url("https://use.typekit.net/cxs8ysj.css");
+		svg > g {
+			visibility: hidden;
+			font-family: "rosewood-std", cursive;
+			font-size: 44px;
+		}
+		svg.diamond > g#diamond,
+		svg.diamond > g#sym,
+		svg.heart > g#heart,
+		svg.heart > g#sym {
+			visibility: visible;
+			fill: red;
+			stroke: red;
+		}
+		svg.spade > g#spade,
+		svg.spade > g#sym,
+		svg.club > g#club,
+		svg.club > g#sym {
+			visibility: visible;
+			fill: black;
+			stroke: black;
+		}
+	</style></defs>
+	<rect x="-5" y="-5" rx="10" ry="15" width="210" height="310" fill="white"/>
+	<g id="diamond" stroke-width="3" stroke-linejoin="round">
+		<path d="
+			M 5 65
+			L 13 77
+			L 21 65
+			L 13 53
+			Z
+			
+			M 179 235
+			L 187 247
+			L 195 235
+			L 187 223
+			Z
+			
+			M 80 150
+			L 100 174
+			L 120 150
+			L 100 126
+			Z
+		"/>
+	</g>
+	<g id="heart" stroke-width="3">
+		<path d="
+			M 13 60
+			c 12 -8 17 5 0 17
+			c -17 -12 -12 -25 0 -17
+			
+			M 187 240
+			c 12 8 17 -5 0 -17
+			c -17 12 -12 25 0 17
+			
+			M 100 140
+			c 24 -16 34 10 0 34
+			c -34 -24 -24 -50 0 -34
+		"/>
+	</g>
+	<g id="spade" stroke-width="3">
+		<path d="
+			M 13 70
+			c 12 8 17 -5 0 -17
+			c -17 12 -12 25 0 17
+			
+			M 187 230
+			c 12 -8 17 5 0 17
+			c -17 -12 -12 -25 0 -17
+			
+			M 100 160
+			c 24 16 34 -10 0 -34
+			c -34 24 -24 50 0 34
+		"/>
+		<path stroke-width="0" d="
+			M 13 70
+			q 0 10 -12 10
+			v 1
+			h 24
+			v -1
+			q -12 0 -12 -10
+			
+			M 187 230
+			q 0 -10 -12 -10
+			v -1
+			h 24
+			v 1
+			q -12 0 -12 10
+			
+			M 100 160
+			q 0 20 -24 20
+			v 2
+			h 48
+			v -2
+			q -24 0 -24 -20
+		"/>
+	</g>
+	<g id="club" stroke-width="3">
+		<path d="
+			M 13 70
+			c 12 10 17 -8 4 -8
+			c 6 -14 -14 -14 -8 0
+			c -13 0 -8 18 4 8
+			
+			M 187 230
+			c 12 -10 17 8 4 8
+			c 6 14 -14 14 -8 0
+			c -13 0 -8 -18 4 -8
+			
+			M 100 160
+			c 24 20 34 -16 8 -16
+			c 12 -28 -28 -28 -16 0
+			c -26 0 -16 36 8 16
+		"/>
+		<path stroke-width="0" d="
+			M 13 70
+			q 0 10 -12 10
+			v 1
+			h 24
+			v -1
+			q -12 0 -12 -10
+			
+			M 187 230
+			q 0 -10 -12 -10
+			v -1
+			h 24
+			v 1
+			q -12 0 -12 10
+			
+			M 100 160
+			q 0 20 -24 20
+			v 2
+			h 48
+			v -2
+			q -24 0 -24 -20
+		"/>
+	</g>
+	<g id="sym" stroke-width="0">
+		<text y="36"></text>
+		<text x="-200" y="-264" transform="rotate(180)"></text>
+	</g>
+	<script>
+		var par = (new URLSearchParams(location.search.slice(1))).keys();
+		var body = document.getElementsByTagName("svg")[0];
+		var symb = document.getElementsByTagName("text");
+		body.classList.add(par.next().value);
+		var text = par.next().value;
+		symb[0].textContent = text;
+		symb[1].textContent = text;
+	</script>
+</svg>
