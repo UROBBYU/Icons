@@ -24,7 +24,7 @@
 			stroke: black;
 		}
 	</style></defs>
-	<rect x="-5" y="-5" rx="10" ry="15" width="210" height="310" fill="white"/>
+	<rect x="-5" y="-5" rx="10" ry="15" width="210" height="310" stroke-width="1" stroke="black" fill="white"/>
 	<g id="diamond" stroke-width="3" stroke-linejoin="round">
 		<path d="
 			M 5 65
